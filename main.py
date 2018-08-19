@@ -7,14 +7,7 @@ from email.mime.text import MIMEText
 #Replace Send list with desired mail ids strings sepereated by commas
 sendList = ["some_mail_id1@some.com","some_mail_id2@some.com",]
 message = """
-Thank you for showing interest to attend the Python workshop.
-
-
-Please join the whatsapp group for further updates.
-https://chat.whatsapp.com/1kI7k656Y9P4fQocYwQrir
-
-
-Ignore if already joined
+SOME RANDOM MESSAGE
 """
 
 # Function to get the message to email format

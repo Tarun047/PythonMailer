@@ -3,6 +3,7 @@ from smtplib import SMTP
 from email.mime.text import MIMEText
 from tkinter import *
 from tkinter import messagebox
+import time
 
 class Application:
     def __init__(self,master=None):
@@ -77,12 +78,13 @@ def main(start=0,*,sendData):
             i+=1
     except Exception as e: # Incase of Server Timed out
         print(e)
-        print("Error Occoured at "+ str(i)+"\n Retrying ... ")
+        print("Error Occoured at "+ str(i)+"\n Retrying in 5sec... ")
+        time.sleep(5000)
         main(start=i,sendData=sendData)
     return
 
 root = Tk()
-root.title("WS Mailer")
+root.title("Python Mailer")
 app = Application(master=root)
 app.main()
 root.mainloop()

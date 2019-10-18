@@ -4,6 +4,7 @@ from email.mime.text import MIMEText
 from tkinter import *
 from tkinter import messagebox
 import time
+import sys
 
 class Application:
     def __init__(self,master=None):

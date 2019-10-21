@@ -64,6 +64,7 @@ def frame_message(sender,reciever,subject,message):
 
 # Main Function - Program Starts Here
 def main(start=0,*,sendData):
+    try_Count = 0
     print("Started Sending")
     #Connecting to your mail provider
     server = SMTP('smtp.gmail.com',587) #This is for gmail
@@ -78,6 +79,10 @@ def main(start=0,*,sendData):
             server.sendmail(sendData['send_id'],mail,m.as_string())# Replace with your mail id
             i+=1
     except Exception as e: # Incase of Server Timed out
+        try_Count+=1
+        #prevent blocking of account
+        if try_Count > 10:
+            return 
         print(e)
         print("Error Occoured at "+ str(i)+"\n Retrying in 5sec... ")
         time.sleep(5000)

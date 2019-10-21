@@ -13,4 +13,5 @@ To Run the Script just use<br />
 <b>python main.py</b>
 <br />
 Just monitor the terminal window running back on script to see any failures. In case of a failure the script will automatically retry in 5sec (To refresh login).
+This project was made to brodcast mails to many people without much burden and is practically applied for workshop organised in our college
 
